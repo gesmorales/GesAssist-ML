@@ -1,5 +1,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2' # This reduces TensorFlow's logging noise
 import joblib
 import numpy as np
 from tensorflow.keras.models import load_model
